@@ -1,0 +1,361 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  background-color: #121212;
+}
+
+.contenedor-principal {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  background: #121212;
+  padding: 0;
+}
+
+.delys-app {
+  width: 100%;
+  max-width: 500px;
+  background-color: #ffffff;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.header-delys {
+  text-align: center;
+  padding: 25px 20px 15px;
+  background-color: #ffffff;
+  border-bottom: 1px solid #eeeeee;
+}
+
+.header-delys h1 {
+  margin: 0;
+  font-size: 2.2rem;
+  color: #222222;
+  font-weight: 800;
+  letter-spacing: -1px;
+}
+
+.header-delys .subtitulo {
+  margin: 5px 0 0 0;
+  font-size: 1rem;
+  color: #666666;
+}
+
+.formulario-delys {
+  padding: 15px;
+  flex-grow: 1;
+  background-color: #fafafa;
+}
+
+.seccion-menu {
+  margin-bottom: 20px;
+  background-color: #ffffff;
+  border: 1px solid #eeeeee;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.seccion-header {
+  padding: 12px 20px;
+  background-color: #ffffff;
+  border-bottom: 1px solid #eeeeee;
+}
+
+.seccion-header h3 {
+  margin: 0;
+  color: #222222;
+  font-size: 1.05rem;
+  font-weight: 700;
+}
+
+.lista-opciones {
+  display: flex;
+  flex-direction: column;
+}
+
+.fila-opcion {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  border-bottom: 1px solid #f5f5f5;
+}
+
+.fila-opcion:last-child {
+  border-bottom: none;
+}
+
+.info-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.info-item span {
+  font-size: 0.95rem;
+  color: #333333;
+  font-weight: 600;
+}
+
+.info-item small {
+  color: #888888;
+  margin-top: 2px;
+}
+
+.texto-fuerte {
+  font-size: 1rem;
+  color: #000000 !important;
+  font-weight: bold;
+}
+
+.contador {
+  display: flex;
+  align-items: center;
+  background-color: #f0f0f0;
+  border-radius: 20px;
+  padding: 2px 5px;
+}
+
+.contador button {
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  color: #222222;
+  font-weight: bold;
+}
+
+.contador span {
+  width: 25px;
+  text-align: center;
+  font-weight: bold;
+  color: #222222;
+}
+
+.opciones-radio {
+  display: flex;
+  gap: 15px;
+}
+
+.opciones-radio label {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 1rem;
+  color: #000000 !important;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.opciones-pago {
+  flex-direction: row;
+  padding: 15px;
+  gap: 10px;
+}
+
+.caja-pago {
+  flex: 1;
+  border: 1px solid #ddd;
+  padding: 15px 10px;
+  text-align: center;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: bold;
+  color: #555;
+  transition: all 0.2s;
+}
+
+.caja-pago input {
+  display: none;
+}
+
+.caja-pago.seleccionado {
+  background-color: #222;
+  color: #fff;
+  border-color: #222;
+}
+
+.resumen-flotante {
+  position: sticky;
+  bottom: 0;
+  width: 100%;
+  background-color: #ffffff;
+  padding: 15px 20px;
+  box-sizing: border-box;
+  box-shadow: 0 -5px 15px rgba(0,0,0,0.05);
+  z-index: 100;
+  border-top: 1px solid #eeeeee;
+}
+
+.totales {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+
+.descuento-info {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.85rem;
+  color: #e52d27;
+  font-weight: bold;
+}
+
+.totales h2 {
+  margin: 5px 0 0 0;
+  font-size: 1.5rem;
+  color: #222;
+  text-align: right;
+}
+
+.btn-confirmar {
+  width: 100%;
+  padding: 15px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  transition: all 0.3s;
+}
+
+.btn-confirmar.inactivo {
+  background-color: #e0e0e0;
+  color: #999999;
+  cursor: not-allowed;
+}
+
+.btn-confirmar.activo {
+  background-color: #222222;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.btn-confirmar.activo:hover {
+  background-color: #000000;
+}
+
+.pantalla-ticket {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 20px;
+  background-color: #121212;
+  flex-grow: 1;
+}
+
+.ticket-papel {
+  background-color: #fdfae2;
+  color: #111111;
+  width: 100%;
+  max-width: 340px;
+  padding: 30px 20px;
+  box-sizing: border-box;
+  font-family: 'Courier New', Courier, monospace;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+  clip-path: polygon(0 0, 100% 0, 100% calc(100% - 10px), 95% 100%, 90% calc(100% - 10px), 85% 100%, 80% calc(100% - 10px), 75% 100%, 70% calc(100% - 10px), 65% 100%, 60% calc(100% - 10px), 55% 100%, 50% calc(100% - 10px), 45% 100%, 40% calc(100% - 10px), 35% 100%, 30% calc(100% - 10px), 25% 100%, 20% calc(100% - 10px), 15% 100%, 10% calc(100% - 10px), 5% 100%, 0 calc(100% - 10px));
+  padding-bottom: 40px;
+}
+
+.ticket-papel h2 {
+  margin: 0;
+  font-size: 1.8rem;
+  letter-spacing: 1px;
+  text-align: center;
+}
+
+.ticket-fecha {
+  font-size: 0.8rem;
+  color: #555555;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.linea-punteada {
+  border-top: 2px dashed #333333;
+  margin: 15px 0;
+}
+
+.numero-pedido {
+  font-size: 1.5rem;
+  margin: 10px 0;
+  font-weight: bold;
+  text-align: center;
+}
+
+.ticket-detalle {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.ticket-item {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.95rem;
+  font-weight: bold;
+}
+
+.ticket-notas p {
+  margin: 3px 0;
+  font-size: 0.85rem;
+}
+
+.ticket-totales {
+  text-align: right;
+}
+
+.ticket-totales p {
+  margin: 5px 0;
+  font-size: 0.9rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.pago-final {
+  margin: 15px 0 5px 0;
+  font-size: 1.6rem;
+  text-align: center;
+  background-color: #111;
+  color: #fdfae2;
+  padding: 10px;
+}
+
+.qr-container {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.qr-code {
+  display: block;
+  mix-blend-mode: multiply;
+}
+
+.scan-text {
+  font-size: 0.75rem;
+  margin-top: 10px;
+  color: #444444;
+  text-align: center;
+}
+
+.btn-nuevo-pedido {
+  margin-top: 30px;
+  background: transparent;
+  color: #ffffff;
+  border: 1px solid #ffffff;
+  padding: 15px 30px;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.btn-nuevo-pedido:hover {
+  background: #ffffff;
+  color: #121212;
+}
